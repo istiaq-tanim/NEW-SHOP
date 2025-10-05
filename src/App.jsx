@@ -1,9 +1,18 @@
+import Announcement from "./components/Announcement"
+import Footer from "./components/Footer"
+import Header from "./components/Header"
+import NewsLetter from "./components/NewsLetter"
+import ShopBoard from "./components/ShopBoard"
 
 function App() {
   return (
-    <div>
-      <h3 className='text-red-500 font-lato'>welcome LWS Shop</h3>
-    </div>
+    <>
+      <Announcement></Announcement>
+      <Header></Header>
+      <ShopBoard></ShopBoard>
+      <NewsLetter></NewsLetter>
+      <Footer></Footer>
+    </>
   )
 }
 
