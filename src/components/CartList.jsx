@@ -5,9 +5,9 @@ function CartList() {
       const { state } = useCart()
       return (
             <>
-                  <h2 className="text-2xl font-bold mb-6">YOUR CART</h2>
+                  <h2 className="text-2xl font-bold mb-10">YOUR CART</h2>
                   {
-                        state?.carts?.map((cart) => <SingleCart key={cart.id} cart={cart}></SingleCart>)
+                        state.carts.length > 0 ? (state?.carts?.map((cart) => <SingleCart key={cart.id} cart={cart}></SingleCart>)) : <div className="text-2xl text-red-400 flex justify-center items-center">There is no Selected Products In Cart</div>
                   }
             </>
       )

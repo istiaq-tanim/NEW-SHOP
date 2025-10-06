@@ -40,7 +40,7 @@ function SingleCart({ cart }) {
                         <p className="text-sm text-gray-500">Size: Large</p>
                         <p className="text-sm text-gray-500">Color: White</p>
                         <div className="flex justify-between items-center mt-2">
-                              <p className="font-bold">${cart.price}</p>
+                              <p className="font-bold">${cart.price * cart.quantity}</p>
                               <div className="flex items-center space-x-2">
                                     <button onClick={() => handleDecrease(cart.id)} className="w-6 h-6 bg-gray-100 rounded flex items-center justify-center cursor-pointer">−</button>
                                     <span className="text-sm">{cart.quantity}</span>

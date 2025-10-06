@@ -1,5 +1,7 @@
+import useTotal from "../hooks/useTotal"
 
 function OrderSummary() {
+      const { subTotal, discount, total } = useTotal()
       return (
             <div className="mt-6">
                   <h3 className="font-bold text-lg mb-4">Order Summary</h3>
@@ -7,11 +9,11 @@ function OrderSummary() {
                   <div className="space-y-2 mb-4">
                         <div className="flex justify-between">
                               <span className="text-gray-600">Subtotal</span>
-                              <span className="font-medium">$565</span>
+                              <span className="font-medium">${subTotal}</span>
                         </div>
                         <div className="flex justify-between text-red-500">
                               <span>Discount (-20%)</span>
-                              <span>-$113</span>
+                              <span>${discount ?? 0}</span>
                         </div>
                         <div className="flex justify-between">
                               <span className="text-gray-600">Delivery Fee</span>
@@ -19,7 +21,7 @@ function OrderSummary() {
                         </div>
                         <div className="flex justify-between font-bold text-lg pt-2 border-t border-gray-200">
                               <span>Total</span>
-                              <span>$467</span>
+                              <span>${total}</span>
                         </div>
                   </div>
 
