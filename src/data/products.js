@@ -80,7 +80,7 @@ const products = [
             category: 'Sports'
       },
       {
-            id: 8,
+            id: 9,
             name: 'Yoga Mat',
             price: 1200,
             originalPrice: 1800,

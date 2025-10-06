@@ -1,6 +1,7 @@
 import ProductCard from "./ProductCard"
 
 function ProductList({ products }) {
+
   return (
     <div className="product-grid">
 
