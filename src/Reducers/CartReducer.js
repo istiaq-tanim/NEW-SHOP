@@ -61,6 +61,14 @@ function CartReducer(state, action) {
                   }
 
             }
+
+            case "search": {
+                  return {
+                        ...state,
+                        searchTerm: action.searchTerm
+
+                  }
+            }
             default:
                   return state;
       }

@@ -1,5 +1,25 @@
 
+import useCart from './../hooks/useCart';
+
+function debounce(fn, delay) {
+      let timer
+      return (...args) => {
+            if (timer) {
+                  clearTimeout(timer)
+            }
+            timer = setTimeout(() => {
+                  fn(...args)
+            }, delay);
+      }
+}
 function Header() {
+      const { state, dispatch } = useCart()
+      const handleSearch = (e) => {
+            dispatch({
+                  type: "search",
+                  searchTerm: e.target.value
+            })
+      }
       return (
             <header className="border-b border-gray-200 py-4 px-4 md:px-8">
                   <div className="container mx-auto flex items-center justify-between">
@@ -14,7 +34,7 @@ function Header() {
 
                         <div className="flex items-center space-x-4">
                               <div className="relative hidden md:block w-64">
-                                    <input type="text" placeholder="Search for products..."
+                                    <input onChange={debounce(handleSearch, 500)} type="text" placeholder="Search for products..."
                                           className="w-full bg-gray-100 rounded-full py-2 px-4 text-sm" />
                                     <span className="absolute right-3 top-2">
                                           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24"
@@ -25,12 +45,18 @@ function Header() {
                                     </span>
                               </div>
 
-                              <a href="#" className="hover:text-gray-500 transition-colors">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                                    </svg>
-                              </a>
+
+                              <div >
+                                    <a href="#" className="hover:text-gray-500 transition-colors relative">
+                                          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                      d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                          </svg>
+
+                                          <span className='absolute -top-3 -right-1'>{state.carts.length}</span>
+                                    </a>
+
+                              </div>
 
                               <a href="#" className="hover:text-gray-500 transition-colors">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

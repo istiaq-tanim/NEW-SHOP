@@ -5,7 +5,8 @@ import products from './../data/products';
 
 const initialState = {
       carts: [],
-      products: products
+      products: products,
+      searchTerm: ""
 }
 
 function CartProvider({ children }) {
