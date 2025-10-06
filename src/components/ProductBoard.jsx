@@ -4,6 +4,7 @@ import Filter from "./Filter"
 import ProductList from "./ProductList"
 
 function ProductBoard() {
+      // eslint-disable-next-line no-unused-vars
       const [productItems, setProducts] = useState(products)
       return (
             <>

@@ -35,6 +35,22 @@ function CartReducer(state, action) {
                         carts: state.carts.filter(cart => cart.id !== action.id)
                   }
             }
+
+            case "decrease_cart": {
+                  const findIndex = state.carts.findIndex(item => item.id === action.id)
+
+                  if (state.carts[findIndex].quantity > 1) {
+                        return {
+                              ...state,
+                              carts: state.carts.map((item) => item.id === action.id ? { ...item, quantity: item.quantity - 1 } : item)
+                        }
+                  } else {
+                        return {
+                              ...state,
+                              carts: state.carts.filter(cart => cart.id !== action.id)
+                        }
+                  }
+            }
             default:
                   return state;
       }
