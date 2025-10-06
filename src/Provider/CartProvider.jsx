@@ -1,9 +1,11 @@
-import { useReducer } from 'react'
-import { CartContext } from '../Context'
-import CartReducer from '../Reducers/CartReducer'
+import { useReducer } from 'react';
+import { CartContext } from '../Context';
+import CartReducer from '../Reducers/CartReducer';
+import products from './../data/products';
 
 const initialState = {
-      carts: []
+      carts: [],
+      products: products
 }
 
 function CartProvider({ children }) {

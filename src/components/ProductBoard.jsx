@@ -1,16 +1,14 @@
-import { useState } from "react"
-import products from "../data/products"
 import Filter from "./Filter"
 import ProductList from "./ProductList"
+import useCart from './../hooks/useCart';
 
 function ProductBoard() {
-      // eslint-disable-next-line no-unused-vars
-      const [productItems, setProducts] = useState(products)
+      const { state } = useCart()
       return (
             <>
                   <div className="lg:col-span-2">
                         <Filter></Filter>
-                        <ProductList products={productItems}></ProductList>
+                        <ProductList products={state?.products}></ProductList>
                   </div>
             </>
       )
