@@ -18,6 +18,12 @@ function ProductBoard() {
             case "popularity":
                   filterProduct = filterProduct.sort((a, b) => b.rating - a.rating)
                   break
+            case "price-asc":
+                  filterProduct = filterProduct.sort((a, b) => a.price > b.price ? 1 : - 1)
+                  break
+            case "price-desc":
+                  filterProduct = filterProduct.sort((a, b) => b.price > a.price ? 1 : -1)
+                  break
             default:
                   break
       }
