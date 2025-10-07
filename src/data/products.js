@@ -7,7 +7,8 @@ const products = [
             image: 'image1.png',
             stock: 0,
             rating: 4.5,
-            category: 'Electronics'
+            category: 'Electronics',
+            createdAt: '2024-01-15T10:30:00Z'
       },
       {
             id: 2,
@@ -17,7 +18,8 @@ const products = [
             image: 'image2.png',
             stock: 8,
             rating: 4.8,
-            category: 'Electronics'
+            category: 'Electronics',
+            createdAt: '2024-02-20T14:45:00Z'
       },
       {
             id: 3,
@@ -27,7 +29,8 @@ const products = [
             image: 'image3.png',
             stock: 25,
             rating: 4.3,
-            category: 'Accessories'
+            category: 'Accessories',
+            createdAt: '2024-03-10T09:15:00Z'
       },
       {
             id: 4,
@@ -37,7 +40,8 @@ const products = [
             image: 'image4.png',
             stock: 0,
             rating: 4.6,
-            category: 'Electronics'
+            category: 'Electronics',
+            createdAt: '2024-04-05T16:20:00Z'
       },
       {
             id: 5,
@@ -47,7 +51,8 @@ const products = [
             image: 'image5.png',
             stock: 12,
             rating: 4.7,
-            category: 'Fashion'
+            category: 'Fashion',
+            createdAt: '2024-05-12T11:00:00Z'
       },
       {
             id: 6,
@@ -57,7 +62,8 @@ const products = [
             image: 'image6.png',
             stock: 5,
             rating: 4.4,
-            category: 'Home & Kitchen'
+            category: 'Home & Kitchen',
+            createdAt: '2024-06-18T13:30:00Z'
       },
       {
             id: 7,
@@ -67,7 +73,8 @@ const products = [
             image: 'image7.png',
             stock: 3,
             rating: 4.9,
-            category: 'Electronics'
+            category: 'Electronics',
+            createdAt: '2024-07-22T08:45:00Z'
       },
       {
             id: 8,
@@ -77,7 +84,8 @@ const products = [
             image: 'image8.png',
             stock: 20,
             rating: 3.2,
-            category: 'Sports'
+            category: 'Sports',
+            createdAt: '2024-08-30T15:10:00Z'
       },
       {
             id: 9,
@@ -86,8 +94,9 @@ const products = [
             originalPrice: 1800,
             image: 'image9.png',
             stock: 20,
-            rating: 4.2,
-            category: 'Sports'
+            rating: 2.8,
+            category: 'Sports',
+            createdAt: '2024-09-14T12:25:00Z'
       }
 ]
 
